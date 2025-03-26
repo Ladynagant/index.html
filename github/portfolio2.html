@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BTS SIO SISR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Projects Section */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 style="color: white;">Portfolio SISR</h2>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header id="home">
+            <img src="profile-placeholder.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Your Name</h1>
+            <p>BTS SIO SISR Student | Network & Systems Administrator</p>
+        </header>
+
+        <section id="skills" class="skills-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Networking</h3>
+                    <p>TCP/IP, VLAN, Routing, Switching, VPN</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Systems Administration</h3>
+                    <p>Windows Server, Active Directory, Linux</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Security</h3>
+                    <p>Firewall, Network Security, Cybersecurity</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Virtualization</h3>
+                    <p>VMware, VirtualBox, Hyper-V</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1" class="project-img">
+                <div class="project-info">
+                    <h3>Network Infrastructure Project</h3>
+                    <p>Implementation of a secure enterprise network infrastructure using VLANs and routing protocols.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2" class="project-img">
+                <div class="project-info">
+                    <h3>Active Directory Deployment</h3>
+                    <p>Setup and configuration of Windows Server with Active Directory services.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3" class="project-img">
+                <div class="project-info">
+                    <h3>Security Implementation</h3>
+                    <p>Implementation of network security measures including firewall configuration and VPN setup.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+                <a href="https://github.com/yourusername">GitHub</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
